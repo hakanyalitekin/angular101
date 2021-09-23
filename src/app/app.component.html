@@ -1,10 +1,9 @@
   <div class="row">
-    <div class="col"> Column </div>
-    <div class="col"> Column </div>
-    <div class="col"> Column </div>
-    <div class="col"> Column </div>
+    <div class="col"> <h2 routerLink="home">Go to Home</h2> </div>
+    <div class="col"> <h2 routerLink="role">Go to Role </h2></div>
+    <div class="col"> <h2 routerLink="user">Go to User</h2> </div>
+    <div class="col"> <h2 [routerLink]="['user',7]">Go to User Detail (7)</h2> </div>
   </div>
   <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "large" color = "#eb0000" type = "square-loader" [fullScreen] = "true"><p style="color: white" > Yükleniyor... </p></ngx-spinner>
-  <button igxButton="flat">Flat</button>
 
 <router-outlet></router-outlet>
