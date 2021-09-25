@@ -7,19 +7,12 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxButtonModule } from 'igniteui-angular';
-import { HomeComponent } from './home/home.component';
 import { RoleComponent } from './role/role.component';
-import { UserComponent } from './user/user.component';
-import { UserDetailComponent } from './user/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     RoleComponent,
-    UserComponent,
-    UserDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +30,6 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 
     }),
     NgxSpinnerModule,
-    IgxButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
