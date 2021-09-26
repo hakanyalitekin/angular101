@@ -1,0 +1,13 @@
+
+@import "~igniteui-angular/lib/core/styles/themes/index";
+
+$custom-navbar-theme: igx-navbar-theme(
+    $text-color: #151515,
+    $background: #0088aa,
+    $idle-icon-color: #151515,
+    $hover-icon-color: #ffff
+);
+@include igx-css-vars($custom-navbar-theme);
+
+// @include igx-theme($default-palette);
+

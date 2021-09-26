@@ -8,11 +8,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RoleComponent } from './role/role.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { IgxButtonModule, IgxIconModule, IgxNavbarModule, IgxNavigationDrawerModule, IgxRippleModule, IgxToggleModule } from 'igniteui-angular';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoleComponent,
+    NavbarComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +36,15 @@ import { RoleComponent } from './role/role.component';
 
     }),
     NgxSpinnerModule,
+    IgxIconModule,
+    IgxNavbarModule,
+    IgxNavigationDrawerModule,
+    FormsModule,
+    IgxButtonModule,
+    IgxIconModule,
+    IgxNavigationDrawerModule,
+    IgxRippleModule,
+    IgxToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent],
