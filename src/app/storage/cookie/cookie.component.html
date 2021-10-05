@@ -1,0 +1,21 @@
+<div class="row">
+    <h3>Cookie Page</h3>
+    <div class="col-2">
+        <button class="btn btn-primary" [routerLink]="['../local-storage']"> Go To Cookie Page </button>
+    </div>
+    </div>
+<br><br>
+    
+<div class="row">
+    <div class="col-md-4">
+        <h5>Simple Cookie</h5>
+        <input class="form-control" type="text" [(ngModel)]="name">
+        <br>
+        <button class="btn btn-danger m-1" (click)="setItem(name)"> Set Item </button>
+        <button class="btn btn-warning m-1" (click)="getItem()"> Get Item </button>
+        <button class="btn btn-primary m-1" (click)="clearItem()"> Clear Name Item </button>
+        <button class="btn btn-success m-1" (click)="clearAll()"> Clear All </button>
+
+    </div>
+
+</div>

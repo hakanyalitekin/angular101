@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { IgxButtonModule, IgxIconModule, IgxNavbarModule, IgxNavigationDrawerModule, IgxRippleModule, IgxToggleModule } from 'igniteui-angular';
 import { FormsModule } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { FormsModule } from '@angular/forms';
     IgxRippleModule,
     IgxToggleModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 

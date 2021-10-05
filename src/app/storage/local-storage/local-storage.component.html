@@ -1,0 +1,35 @@
+<div class="row">
+    <h3>Local-Storage Page</h3>
+
+    <div class="col-2">
+        <button class="btn btn-primary" [routerLink]="['../cookie']"> Go To Cookie Page </button>
+    </div>
+</div>
+<br>
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <h5>Simple</h5>
+        <input class="form-control" type="name" [(ngModel)]="name">
+        <br>
+        <button class="btn btn-danger m-1" (click)="setItem(name)"> Set Item </button>
+        <button class="btn btn-warning m-1" (click)="getItem()"> Get Item </button>
+        <button class="btn btn-primary m-1" (click)="clearItem()"> Clear Name Item </button>
+        <button class="btn btn-success m-1" (click)="clearAll()"> Clear All </button>
+
+    </div>
+ <div class="col-2"></div>
+    <div class="col-md-4">
+        <h5>Object</h5>
+        <div class="row">
+            <input class="form-control col-5 " type="name" [(ngModel)]="objUser.name">
+            <input class="form-control col-5" style="margin-left:10px;" type="name" [(ngModel)]="objUser.surName">
+        </div>
+        <br>
+        <button class="btn btn-danger m-1" (click)="setObject()"> Set Object </button>
+        <button class="btn btn-warning m-1" (click)="getObject()"> Get Object </button>
+        <button class="btn btn-primary m-1" (click)="clearObject()"> Clear Object </button>
+        <button class="btn btn-success m-1" (click)="clearAll()"> Clear All </button>
+
+    </div>
+</div>
