@@ -1,0 +1,78 @@
+<div class="d-flex justify-content-center">
+    <h2>Angular Directives</h2>
+</div>
+
+<h3>Structural Directives</h3>
+<div class="row">
+    <div class="col-4">
+        <h4>*ngIf</h4>
+        <input placeholder="herhangi birşey" type="text" [(ngModel)]="name">
+        <p *ngIf="title">Title var</p>
+
+        <p *ngIf="name.length > 0">
+            İsim Hakan
+        </p>
+        <br>
+        <div *ngIf="title; then titleExist; else titleNotExist;"></div>
+        
+        <ng-template #titleExist>titleExist görüntüleniyor</ng-template>
+        <ng-template #titleNotExist>titleNotExist görüntüleniyor</ng-template>
+
+        <button (click)="changeTitle()">Title Change</button>
+    </div>
+
+
+    <div class="col-4">
+        <h4>*ngSwitch</h4>
+        <input placeholder="Hakan ya da Kerem yazınız." type="text" [(ngModel)]="userName">
+        <ul [ngSwitch]="userName">
+            <li *ngSwitchCase="'Hakan'">Selam Hakan</li>
+            <li *ngSwitchCase="'Kerem'">Selam Kerem</li>
+            <li *ngSwitchDefault>Selam Millet</li>
+        </ul>
+    </div>
+
+
+    <div class="col-4">
+        <h4>*ngFor</h4>
+        <ul>
+            <li *ngFor="let city of cities; let i = index">{{city.name}}</li>
+        </ul>
+    </div>
+</div>
+
+<br><br><hr>
+
+<h3>Attribute Directives</h3>
+
+<div class="row">
+  <div class="col-md-6">
+    <h4>[ngClass]</h4>
+
+    <input placeholder="red ya da blue yazını" type="text" [(ngModel)]="color" />
+
+    <p [ngClass]="color === 'red' ? 'red' : 'blue'">Renk</p>
+    <p [ngClass]="{red: color === 'red', blue: color === 'blue'}"  class="purple" > Yeni Renk </p>
+  </div>
+
+  <div class="col-md-6">
+    <h4>[ngStyle]</h4>
+
+    <input placeholder="Hakan yada herhangi bir renk yazınız." type="text" [(ngModel)]="color" />
+    <p [ngStyle]="{ color: color }">Style Renk</p>
+    <p [ngStyle]="{ color: color === 'Hakan' ? 'red' : 'blue' }">Yeni Style Renk</p>
+  </div>
+</div>
+
+
+
+<h3>Custom Directives</h3>
+<code> ng g d highlight --skip--import</code>
+<div class="row">
+  <div class="col-md-6">
+    <p appHighlight>Highlight Directive Works!</p>
+
+    <p appHighlight [highlightColor]="'yellow'">Yellow Custom Directive</p>
+    <p appHighlight highlightColor="orange">Orange Custom Directive</p>
+  </div>
+</div>
