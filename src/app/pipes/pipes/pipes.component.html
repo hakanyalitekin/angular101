@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-3">
+        <h3>Lowercase</h3>
+        <p> <b> Normal:</b> {{title}}</p>
+        <p> <b>LowerCase:</b> {{title | lowercase}}</p>
+    </div>
+
+    <div class="col-3">
+        <h3>Titelcase</h3>
+        <p> <b> Normal:</b> {{title}}</p>
+        <p> <b>TitleCase:</b> {{title | titlecase }}</p>
+    </div>
+
+    <div class="col-3">
+        <h3>Uppercase</h3>
+        <p> <b> Normal:</b> {{title}}</p>
+        <p> <b>Uppercase:</b> {{title | uppercase }}</p>
+        <p> <b>Turkish Uppercase:</b> {{turkishUpperCase }}</p>
+    </div>
+</div>
+<br>
+<hr>
+<div class="row">
+    <div class="col-3">
+        <h3>Date Pipe</h3>
+        <code> <a  target="_blank" href="https://angular.io/api/common/DatePipe">https://angular.io/api/common/DatePipe</a>  </code>
+        <p><b>Custom Date:</b> {{today | date : "dd/MM/yy"}}</p>
+        <p><b>Easy Use Date:</b> {{today | date : "short"}}</p>
+        <p><b>Easy Use Date:</b> {{today | date : "full"}}</p>
+    </div>
+</div>
