@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PipesComponent } from './pipes/pipes.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { MyFilteringPipe, TlPipe } from 'src/libs';
 
 const routes: Routes = [{
   path: "",
@@ -11,7 +12,7 @@ const routes: Routes = [{
 
 @NgModule({
   declarations: [
-    PipesComponent
+    PipesComponent, TlPipe, MyFilteringPipe
   ],
   imports: [
     CommonModule,

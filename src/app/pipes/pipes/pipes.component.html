@@ -18,14 +18,66 @@
         <p> <b>Turkish Uppercase:</b> {{turkishUpperCase }}</p>
     </div>
 </div>
+
+
 <br>
 <hr>
 <div class="row">
-    <div class="col-3">
+    <div class="col-4">
         <h3>Date Pipe</h3>
         <code> <a  target="_blank" href="https://angular.io/api/common/DatePipe">https://angular.io/api/common/DatePipe</a>  </code>
         <p><b>Custom Date:</b> {{today | date : "dd/MM/yy"}}</p>
         <p><b>Easy Use Date:</b> {{today | date : "short"}}</p>
         <p><b>Easy Use Date:</b> {{today | date : "full"}}</p>
+        <p><b>Turkish Date:</b> {{today | date : "full": '' :'tr-TR'}}</p>
+    </div>
+    <div class="col-4">
+        <h3>Currency Pipe</h3>
+        <p><b>Normal Currency:</b> {{ cashValue}}</p>
+        <p><b>Default $ Currency Pipe:</b> {{ cashValue | currency }}</p>
+        <p><b>EURO Currency Pipe:</b> {{ cashValue | currency :"EUR"}}</p>
+        <p><b>TL Currency Pipe:</b> {{ cashValue | currency :"TRY":"symbol":"1.2-2":"tr-TR"}}</p>
+
+    </div>
+
+    <div class="col-4">
+        <h3>Percent Pipe</h3>
+        <p><b>Default Percent Pipe</b> {{ percentVal | percent}}</p>
+        <p><b>Default Percent Pipe</b> {{ percentVal | percent:"":"tr-TR"}}</p>
+    </div>
+</div>
+
+
+<br>
+<hr>
+<div class="row">
+    <div class="col-6">
+        <h3>JSON Pipe</h3>
+        <p><b>Without JSON Pipe</b> {{ objectVal}}</p>
+        <p><b>With JSON Pipe</b> {{ objectVal | json}}</p>
+    </div>
+
+    <div class="col-6">
+        <h3>Slice(Dilim, Pay) Pipe</h3>
+        <p><b>Normal </b> {{ cityName}}</p>
+        <p><b>0-3 Arası </b> {{ cityName | slice:0:3}}</p>
+        <p><b>İlk 3 hariç </b> {{ cityName | slice:3}}</p>
+        <p><b>Çoklu Kullanım. SLICE - UPPERCASE </b> {{ cityName | uppercase | slice:0:3}}</p>
+    </div>
+</div>
+
+
+
+<br>
+<hr>
+<div class="row">
+    <div class="col-6">
+        <h3>Custom Pipe</h3>
+        <p><b>Basic TRY Pipe </b> {{ customPipeCash | tl }}</p>
+        <p><b>My Filter Pipe (çalışmıyor)</b> </p>
+            <ul>
+                <!-- <li *ngFor="let city of cities | myFiltering : 'i'">{{ city }}</li> -->
+                <li *ngFor="let city of cities">{{ city }}</li>
+            </ul>
     </div>
 </div>

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ToastrModule } from 'ngx-toastr';
@@ -13,6 +13,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { IgxButtonModule, IgxIconModule, IgxNavbarModule, IgxNavigationDrawerModule, IgxRippleModule, IgxToggleModule } from 'igniteui-angular';
 import { FormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
+import localeTR from "@angular/common/locales/tr";
+// import localeTRextra from "@angular/common/locales/extra/tr";
+// registerLocaleData(localeTR,'tr-TR',localeTRextra);
+registerLocaleData(localeTR);
 
 @NgModule({
   declarations: [
