@@ -21,7 +21,7 @@ export class PipesComponent implements OnInit {
 
   customPipeCash = 133.23;
 
-   cities:any = [
+  cities:string[] = [
     "istanbul",
     "izmir",
     "ankara",
