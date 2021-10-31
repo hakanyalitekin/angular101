@@ -1,0 +1,14 @@
+
+<br>
+
+<!-- <b> Child 1 Component -> Gelen Sonuç :</b> {{data | json}} -->
+
+
+<div *ngIf="data" >{{data?.name}} kişisi
+    <p *ngIf="data.status">Başarılıdır</p>
+    <p *ngIf="!data.status">Başarısızdır</p>
+</div>
+
+<!-- <button class="btn btn-warning" (click)="emitForm($event)">Reset 1 </button> -->
+<br>
+<button class="btn btn-warning" (click)="resetForm.emit(data.name)">Reset</button>
