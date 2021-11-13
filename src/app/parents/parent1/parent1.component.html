@@ -10,8 +10,8 @@
         Başarı Durumu : 
         <select [(ngModel)]="successStatus">
             <option value="0">Seçiniz</option>
-            <option value="true">Başarılı</option>
-            <option value="false">Başarısız</option>
+            <option [ngValue]="true">Başarılı</option>
+            <option [ngValue]="false">Başarısız</option>
         </select>
 
     </div>
